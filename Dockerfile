@@ -47,5 +47,6 @@ USER nextjs
 
 EXPOSE 3000
 
+RUN chmod +x ./app/entrypoint.sh
 ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["concurrently","node server.js", "node cron.js"]
